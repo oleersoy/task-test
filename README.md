@@ -1,4 +1,4 @@
-# superfly-css-task-test
+# Test task
 
 The [superfly-css-task-test](https://github.com/superfly-css/superfly-css-task-test):
 - Supports nunjucks templating
