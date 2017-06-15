@@ -1,3 +1,3 @@
-require('superfly-css-task-clean');
-require('superfly-css-task-build');
-require('superfly-css-task-test');
+require('@superflycss/task-clean');
+require('@superflycss/task-build');
+require('./src/main/js/index.js');

@@ -1,11 +1,13 @@
 {
   "name": "@superflycss/task-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Test task",
   "main": "src/main/js/index.js",
   "scripts": {
-    "setup": "npm install",
-    "test": "npm run setup && gulp test:css"
+    "update": "ncu -a && npm i",
+    "clean": "gulp clean",
+    "build": "npm run clean && gulp build:css",
+    "test": "npm run build && gulp test:css"
   },
   "repository": {
     "type": "git",
@@ -32,7 +34,13 @@
     "gulp-highlight": "^2.1.0",
     "gulp-nunjucks-render": "^2.2.1",
     "predentation": "^0.1.1",
-    "superfly-css-pli": "0.0.9",
     "vinyl-transform": "^1.0.0"
+  },
+  "devDependencies": {
+    "@superflycss/pli": "^1.0.0",
+    "@superflycss/task-build": "^1.0.2",
+    "@superflycss/task-clean": "^1.0.0",
+    "gulp-util": "^3.0.8",
+    "npm-check-updates": "^2.11.3"
   }
 }
