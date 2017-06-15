@@ -1,7 +1,7 @@
 # Test task
 
-The [superflycss/task-test](https://github.com/superflycss/task-test):
-- Supports [nunjucks](https://mozilla.github.io/nunjucks/) templating
+The [superflycss/task-test](https://github.com/superflycss/task-test) supports the visual testing of [superflycss](https://github.com/superflycss/superflycss) [components](https://github.com/superflycss?utf8=%E2%9C%93&q=components&type=&language=) and [utilities](https://github.com/superflycss?utf8=%E2%9C%93&q=utilities&type=&language=) in general and has the folowing features:
+- [Nunjucks](https://mozilla.github.io/nunjucks/) templating
 - Highlights content contained in `Test-markup`
 - Generates a corresponding `Test-render` block that displays the markup contained in the `Test-markup` block
 
