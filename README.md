@@ -7,7 +7,7 @@ The [superflycss/task-test](https://github.com/superflycss/task-test):
 
 ## Usage
 
-The `task-test` github project contains the example referred to here.  First clone the project:
+The [task-test github project](https://github.com/superflycss/task-test) contains the example referred to here.  First clone the project:
 ``` console
 git clone https://github.com/superflycss/task-test
 ```
