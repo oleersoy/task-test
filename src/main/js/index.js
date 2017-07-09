@@ -15,7 +15,6 @@ var gulp = require('gulp');
 var nunjucksRender = require('gulp-nunjucks-render');
 
 // -1-
-var cheerio = require('gulp-cheerio');
 var highlight = require('gulp-highlight');
 var dom  = require('gulp-jsdom');
 var gutil = require('gulp-util');
