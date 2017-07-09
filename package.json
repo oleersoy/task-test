@@ -1,6 +1,6 @@
 {
   "name": "@superflycss/task-test",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Test task",
   "main": "src/main/js/index.js",
   "scripts": {
@@ -30,8 +30,8 @@
   "homepage": "https://github.com/superflycss/task-test#readme",
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-cheerio": "^0.6.2",
     "gulp-highlight": "^2.1.0",
+    "gulp-jsdom": "^0.1.4",
     "gulp-nunjucks-render": "^2.2.1",
     "predentation": "^0.1.1",
     "vinyl-transform": "^1.0.0"

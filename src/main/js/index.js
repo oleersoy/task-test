@@ -17,6 +17,7 @@ var nunjucksRender = require('gulp-nunjucks-render');
 // -1-
 var cheerio = require('gulp-cheerio');
 var highlight = require('gulp-highlight');
+var dom  = require('gulp-jsdom');
 var gutil = require('gulp-util');
 
 var transform = require('vinyl-transform');
@@ -30,6 +31,10 @@ var PLI = require('@superflycss/pli');
 
 var renderTestBlock = '\n    <div class="Test_render"></div>';
 
+function insertAfter(referenceNode, newNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
 //---------------------------------
 gulp.task('test:css', function() {
   return gulp
@@ -37,14 +42,22 @@ gulp.task('test:css', function() {
     .pipe(nunjucksRender({
       path: [PLI.src.main.nunjucks]
     }))
-    .pipe(cheerio(function($, file) {
-      $('.Test_markup > code').each(function() {
-        var markup = $(this).html();
+    .pipe(dom(function(document){
+        document.querySelectorAll('.Test_markup > code').forEach((node)=>
+        {
+          var markup = node.innerHTML;
+          var testDescriptionNode =
+          node.parentElement.parentElement.nextElementSibling.querySelector('.Test_description');
 
-        //Insert the Test_render block after the Test_description block
-        //Append the markup block to the Test-render block
-        $($(this).parent().parent().next().children('.Test_description')).after(renderTestBlock).next().append(markup);
-      });
+          //console.log(testDescriptionNode.getAttribute('class'));
+
+          var renderTestBlock = document.createElement('div');
+          renderTestBlock.innerHTML = markup;
+          renderTestBlock.setAttribute('class', "Test_render");
+          insertAfter(testDescriptionNode, renderTestBlock);
+
+          console.log(testDescriptionNode.nextSibling.getAttribute("class"));
+        });
     }))
     .pipe(highlight())
     .pipe(pre)
