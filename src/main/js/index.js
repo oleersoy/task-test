@@ -47,15 +47,10 @@ gulp.task('test:css', function() {
           var markup = node.innerHTML;
           var testDescriptionNode =
           node.parentElement.parentElement.nextElementSibling.querySelector('.Test_description');
-
-          //console.log(testDescriptionNode.getAttribute('class'));
-
           var renderTestBlock = document.createElement('div');
           renderTestBlock.innerHTML = markup;
           renderTestBlock.setAttribute('class', "Test_render");
           insertAfter(testDescriptionNode, renderTestBlock);
-
-          console.log(testDescriptionNode.nextSibling.getAttribute("class"));
         });
     }))
     .pipe(highlight())
