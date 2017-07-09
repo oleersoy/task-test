@@ -38,9 +38,6 @@ function insertAfter(referenceNode, newNode) {
 gulp.task('test:css', function() {
   return gulp
     .src(PLI.SRC_TEST_HTML)
-    .pipe(nunjucksRender({
-      path: [PLI.src.main.nunjucks]
-    }))
     .pipe(dom(function(document){
         document.querySelectorAll('.Test_markup > code').forEach((node)=>
         {
@@ -52,6 +49,9 @@ gulp.task('test:css', function() {
           renderTestBlock.setAttribute('class', "Test_render");
           insertAfter(testDescriptionNode, renderTestBlock);
         });
+    }))
+    .pipe(nunjucksRender({
+      path: [PLI.src.main.nunjucks]
     }))
     .pipe(highlight())
     .pipe(pre)
