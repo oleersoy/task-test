@@ -30,7 +30,7 @@
   "homepage": "https://github.com/superflycss/task-test#readme",
   "dependencies": {
     "gulp-highlight": "^2.1.0",
-    "gulp-jsdom": "^0.1.4",
+    "gulp-jsdom": "^1.0.0",
     "gulp-nunjucks-render": "^2.2.1",
     "predentation": "^0.1.1",
     "vinyl-transform": "^1.0.0"
