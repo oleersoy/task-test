@@ -1,3 +1,7 @@
+## Gulp Tasks have been ARCHIVED
+
+Use the [@superflycss/cli](https://www.npmjs.com/package/@superflycss/cli) instead.
+
 # Test task
 
 The [superflycss/task-test](https://github.com/superflycss/task-test) supports the visual testing of [superflycss](https://github.com/superflycss/superflycss) [components](https://github.com/superflycss?utf8=%E2%9C%93&q=components&type=&language=) and [utilities](https://github.com/superflycss?utf8=%E2%9C%93&q=utilities&type=&language=) in general and has the following features:
